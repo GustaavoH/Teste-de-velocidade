@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.pagina {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(img/bgLogin.jpg);
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center, center;
+}
+
+.centro {
+    width: 50%;
+    max-width: 450px;
+    background: rgb(0, 0, 0, 0.85);
+    padding: 34px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 7px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo {
+    padding: 15px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    transition: all linear 190ms;
+    font-size: 0.9em;
+    color: #444;
+    margin-bottom: 5px;
+    outline: none;
+}
+
+.campo::placeholder {
+    color: #ccc;
+}
+
+.campo:focus {
+    border-color: #48bf53;
+}
+
+.btn {
+    padding: 15px;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    margin-top: 20px;
+    border-radius: 7px;
+    background-color: #30d340;
+    cursor: pointer;
+    transition: all linear 190ms;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #379941;
+}
+
+form p {
+    font-size: 1.0em;
+    color: #666;
+}
+
+form a {
+    font-size: 0.9em;
+    color: #65b40b;
+    text-decoration: none;
+}
+
+form h2 {
+    font-size: 1.9em;
+    color: #FFF;
+    font-weight: 700;
+}
