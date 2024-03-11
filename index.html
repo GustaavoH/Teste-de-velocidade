@@ -1,27 +1,54 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <link rel="stylesheet" href="style.css">
-    <title>Katze.net</title>
-  </head>
-  <body>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Login</title>
+</head>
+<body>
+
+  <div class="pagina">
     <div class="pagina">
-        <div class="pagina">
-            <div class="centro">
-                <form>
-                    <h2>Login</h2>
-                    <p>Digite seus dados.</p>
-                    <input class="campo" type="email" placeholder="Digite seu Email.">
-                    <input class="campo" type="password" placeholder="Digite sua Senha.">
-                    <a href="#">Esqueci minha Senha</a>
-                    <input class="btn" type="submit" value="Acessar">
-                    <p>Ainda não possui conta <a href="#">Crie uma agora.</a></p>
-                </form>
-            </div>
+        <div class="centro">
+
+            <form id="loginForm">
+
+              <h2>Login</h2>
+              <p>Digite seus dados.</p>
+              <input class="campo" type="email" id="email" name="email"><br>
+              <input class="campo "type="password" id="password" name="password"><br><br>
+              <a href="#">Esqueci minha Senha</a>
+              <button type="button" id="loginButton">Acessar</button> <!-- Alterado o tipo de botão para "button" -->
+              <p>Ainda não possui conta <a href="#">Crie uma agora.</a></p>
+</form>
         </div>
     </div>
-  </body>
+  </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Adicionar evento de clique ao botão de login
+  document.getElementById("loginButton").addEventListener("click", function(event) {
+    // Obter os valores do email e senha
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    
+    // Credenciais pré-definidas
+    var preDefinedEmail = "capinhanobru@gmail.com";
+    var preDefinedPassword = "senha123";
+    
+    // Verificar se o email e a senha correspondem às credenciais pré-definidas
+    if(email === preDefinedEmail && password === preDefinedPassword) {
+      // Se forem válidos, redirecione para a próxima página
+      window.location.href = "pgmain.html";
+    } else {
+      // Caso contrário, exiba uma mensagem de erro
+      alert("Email ou senha incorretos. Por favor, tente novamente.");
+    }
+  });
+});
+</script>
+
+</body>
 </html>
