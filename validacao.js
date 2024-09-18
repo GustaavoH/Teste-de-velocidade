@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       
       // Credenciais pré-definidas
-      var preDefinedEmail = "capinhanobru@gmail.com";
+      var preDefinedEmail = "teste@gmail.com";
       var preDefinedPassword = "senha123";
       
       // Verificar se o email e a senha correspondem às credenciais pré-definidas
